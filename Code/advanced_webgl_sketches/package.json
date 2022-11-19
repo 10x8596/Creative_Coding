@@ -1,0 +1,22 @@
+{
+  "name": "advanced_webgl_sketches",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sketch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas-sketch": "^0.7.4",
+    "canvas-sketch-util": "^1.10.0",
+    "glsl-aastep": "^1.0.1",
+    "glsl-noise": "^0.0.0",
+    "pack-spheres": "^1.0.4",
+    "paper-colors": "^1.0.0",
+    "riso-colors": "^1.0.1",
+    "three": "^0.135.0"
+  }
+}

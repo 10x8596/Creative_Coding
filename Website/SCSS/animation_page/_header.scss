@@ -1,0 +1,188 @@
+.header {
+    z-index: 1;
+
+    // animation for menu icon
+    &.open {
+
+        .overlay {
+            display: block;
+        } 
+
+        .header__toggle {
+            > span:first-child {
+                transform: rotate(45deg);
+                background-color: $lightRed;
+            }
+
+            > span:nth-child(2) {
+                opacity: 0;
+            }
+
+            > span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    // overlay for mobile menu 
+    .overlay {
+        opacity: 0;
+        position: fixed;
+        top: 4.1rem;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-image: linear-gradient($darkRed, transparent);
+        z-index: 99;
+
+        &.fade-in {
+            display: block;
+        }
+    }
+
+    nav {
+        padding-top: 1.0625rem;
+        padding-bottom: 1.0625rem;
+    }
+
+    nav {
+        position: relative;
+        //add padding to nav-bar
+        // top bottom right left
+        padding: 5px 5px 5px 15px;
+        background: transparent;
+        z-index: 999;
+
+        &.open-menu {
+            background: rgba($color: #000000, $alpha: 0.6);
+        }
+    }
+
+    &__logo {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.5em;
+        color: $lightRed;
+
+        > span {
+            color: white;
+        }
+    }
+
+    // mobile menu toggle
+    &__toggle {
+
+        > span {
+            display: block;
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            border-radius: 50px;
+            transition: all 300ms ease-in-out;
+            transform-origin: 3px 2px;
+
+            &:nth-child(2) {
+                background-color: $lightRed;
+            }
+
+            // add margin bottom to all the span except last one
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    // style for mobile menu
+    &__menu {
+        background: #000000c7;
+        // top, right, bottom, left
+        margin: 1.5rem 1.5rem;
+        padding: 1.8rem;
+        border-radius: 15px;
+        position: absolute;
+        width: calc(100% - 3rem);
+        // might not be necessary
+        left: 50%;
+        transform: translateX(-57.5%);
+        z-index: 99;
+
+        a {
+            display: block;
+            color: white;
+            padding: 1.625rem;
+            text-align: center;
+
+            &:hover {
+                background-color: $lightRed;
+                border-radius: 15px;
+                opacity: 0.8;
+            }
+        }
+    }
+
+    // nav links
+    &__links {
+        a {
+            position: relative; // might not need
+            font-size: $font-xlarge;
+            font-weight: 700;
+            transition: color 400ms ease-in-out;
+
+            // add some margin between links except last
+            &:not(:last-child) {
+                margin-right: 32px;
+            }
+            // underline on links on hover
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                height: 5px;
+                left: 0;
+                right: 0;
+                bottom: -10px;
+                background: $lightRed;
+                opacity: 0;
+                transition: opacity 400ms ease-in-out;
+            }
+
+            &:hover {
+                color: $lightRed;
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__buttons {
+        img {
+            width: 50px;
+        }
+    }
+}
+
+@media screen and (min-width: 279px) {
+    .header__menu {
+        transform: translateX(-59.5%);
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .header__menu {
+        transform: translateX(-53.5%);
+    }
+}
+
+@media screen and (min-width: 539px) {
+    .header__menu {
+        transform: translateX(-55.5%);
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    .header__menu {
+        display: none;
+    }
+}

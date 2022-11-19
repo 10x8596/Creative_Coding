@@ -1,0 +1,11 @@
+// functional sass styles
+@import "variables";
+@import "mixins";
+@import "animations";
+
+// elements and different component styles
+@import "globals";
+@import "header";
+@import "slideshow";
+
+@import "footer";

@@ -1,0 +1,32 @@
+/* 
+* { margin: 0; padding: 0; box-sizing: border-box; }
+// border box means that element's padding and border 
+// will be included in its total width and height 
+
+html, body { overflow: hidden; background:#080303; 
+    margin: 0 !important; padding: 0 !important; 
+width: 100%; height: 100%;}
+
+// canvas {position: absolute; background: black;} 
+
+#canvas1 {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    // align-content: center;
+    // box-sizing: border-box;
+} 
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: black;
+}
+
+canvas { 
+    background: black;
+}

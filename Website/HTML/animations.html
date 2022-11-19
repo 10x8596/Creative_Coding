@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>Art Portfolio</title>
+    <link rel="stylesheet" href="/Website/SCSS/animation_page/style.css">
+</head>
+
+<body>
+    <!--navigation bar-->
+    <header class="header">
+        <!--overlay menu for mobile-->
+        <div class="overlay has-fade ">
+
+        </div>
+
+        <nav class="container flex flex-jc-sb flex-ai-c">
+            
+            <!-- logo -->
+            <h1 class="header__logo">Java<span> Script</span> <br>animations</h1>
+            
+            <!-- hamburger menu-->
+            <a href="#" id="btnHamburger" class="header__toggle hide-for-desktop">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+
+            <div class="header__links hide-for-mobile">
+                <a href="/Website/HTML/animations.html">Animations</a>
+                <a href="/Website/HTML/gallery.html">Gallery</a>
+                <a href="/Website/HTML/games.html">Games</a>
+            </div>
+
+            <div class="header__buttons hide-for-mobile">
+                <!--#About# and social-->
+                <a href="https://github.com/10x8596/Creative_Coding" target="_blank" class="button"><img src="/Website/icons/github.png" alt="GitHub"></a>
+                <a href="https://github.com/10x8596/Creative_Coding" target="_blank" class="button"><img src="/Website/icons/github.png" alt="GitHub"></a>
+            </div>
+
+        </nav>
+
+        <div class="header__menu has-fade">
+            <a href="/Website/HTML/animations.html">Animations</a>
+            <a href="/Website/HTML/gallery.html">Gallery</a>
+            <a href="/Website/HTML/games.html">Games</a>
+            <a href="https://github.com/10x8596/Creative_Coding">GitHub</a>
+            <a href="https://github.com/10x8596/Creative_Coding">GitHub</a>
+        </div>
+
+    </header>
+
+    <div id="content">
+        <!-- <iframe id="frame5" src="/Website/_Animations/HTML/audio_vis.html"></iframe>
+        <iframe id="frame4" src="/Website/_Animations/HTML/particle_text.html"></iframe>
+        <iframe id="frame3" src="/Website/_Animations/HTML/floating_particles.html"></iframe>
+        <iframe id="frame2" src="/Website/_Animations/HTML/noise_grid.html"></iframe> -->
+        <iframe id="frame1" src="/Website/_Animations/HTML/connected_particles.html"></iframe>
+    </div>
+
+    <section>
+        <!--SlideShow container-->
+        <div class="slideshow-container">
+            <!--Full width displays with caption text-->
+                <!--Insert JavaScript file/animation-->
+                <div class="text">Connected Particles<br>
+                <br>
+                <div class="subtext">Move your mouse to scatter the lines</div>
+                </div>
+
+                <!--Insert JavaScript file/animation-->
+                <div class="text">Floating Particles<br>
+                <br>
+                <div class="subtext">Move your mouse to scatter the particles</div>
+                </div>
+
+                <!--Insert JavaScript file/animation-->
+                <div class="text">Perlin Noise Grid<br>
+                <br>
+                <div class="subtext">Use the pane at the upper right corner to adjust values</div>
+                </div>
+
+                <!--Insert JavaScript file/animation-->
+                <div class="text">Particle Text<br>
+                <br>
+                <div class="subtext">Move mouse over text to scatter</div>
+                </div>
+
+                <!--Insert JavaScript file/animation-->
+                <div class="text">Audio Visualiser<br>
+                <br>
+                <div class="subtext">Play some sound</div>
+                </div>
+
+                <!--Insert JavaScript file/animation-->
+                <div class="text">Line Flow field<br>
+                <br>
+                <div class="subtext">Move mouse around to zoom in or out of the pattern</div>
+                </div>
+
+                <!--Insert JavaScript file/animation-->
+                <div class="text">Paint brush effect<br>
+                <br>
+                <div class="subtext">Click and move mouse around</div>
+                </div>
+
+            <!--Next and previous buttons-->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!--The dots/circles-->
+        <div class="dots" style="text-align: center;">
+            <!--left arrow-->
+            <i class="arrow left" onclick="plusSlides(-1)"></i>
+            <!--dots-->
+            <a href="/Website/_Animations/HTML/connected_particles.html"><span class="dot" onclick="currentSlide(1)"></span></a>
+            <a href="/Website/_Animations/HTML/floating_particles.html"><span class="dot" onclick="currentSlide(2)"></span></a>
+            <a href="/Website/_Animations/HTML/noise_grid.html"><span class="dot" onclick="currentSlide(2)"></span></a>
+            <a href="/Website/_Animations/HTML/particle_text.html"><span class="dot" onclick="currentSlide(2)"></span></a>
+            <a href="/Website/_Animations/HTML/audio_vis.html"><span class="dot" onclick="currentSlide(2)"></span></a>
+            <a href="/Website/_Animations/HTML/line_field.html"><span class="dot" onclick="currentSlide(2)"></span></a>
+            <a href="/Website/_Animations/HTML/paint_brush.html"><span class="dot" onclick="currentSlide(2)"></span></a>
+            <!--right arrow-->
+            <i class="arrow right" onclick="plusSlides(1)"></i>
+        </div>
+
+    </section>
+
+    <footer>
+    </footer>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+    <script src="/Website/JS/animations.js"></script>
+</body>
+
+</html>

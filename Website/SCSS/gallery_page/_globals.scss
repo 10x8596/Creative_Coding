@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+html {
+    // more accessible, lets user control the zoom level in browser
+    font-size: 100%;
+    // this makes the size of elements include padding in the final width
+    box-sizing: border-box;
+}
+
+// inherit the box-sizing border-box to all elements
+*, *::before, *::after { box-sizing: inherit; }
+
+body { margin: 0 auto; padding: 0; line-height: 1.3em; font-family: 'Poppins';
+       font-size: $font-medium; font-weight: 300; color: white; 
+       background: rgb(255, 255, 255); overflow-x: hidden; background-size: cover;
+    // overflow-y: hidden;
+    //vertical-align: baseline;
+    // no scrolling while menu on screen
+    &.no-scroll { overflow: hidden; }
+}
+
+// animations css
+#content { width: 100%; height: 100%; border: none; 
+    iframe { position: fixed; top: 0; left: 0; bottom: 0; right: 0; 
+             width: 100%; height: 100%; border: none; padding: 0; margin: 0; 
+             overflow: hidden; z-index: 1; }
+}
+
+section {overflow: visible;}
+
+// #canvas1 {
+//     border: 3px solid white;
+//     top: 50%;
+//     left: 50%;
+//     position: absolute;
+//     width: 800px;
+//     height: 1200px;
+//     transform: translate(-50%, -50%);
+// }
+
+// canvas.fade {
+//     opacity: 1;
+// }
+
+a, a:visited, a:hover { text-decoration: none; color: white; }
+
+// Spacing 
+.container { padding-left: 1.5rem; padding-right: 1.5rem; }
+
+//Flexbox styles
+.flex { display: flex;
+
+    &-jc-sb { justify-content: space-between; }
+
+    &-jc-c { justify-content: center; }
+
+    &-ai-c { align-items: center; }
+}
+
+// Buttons
+.button { padding: 2rem 0.05rem .00001rem .05rem; border-radius: 50px; 
+          cursor: pointer; color: white; background: $darkTurqouise;
+          border-style: none; font-weight: 500;
+          //margin-bottom: 5em;
+
+    &:not(:last-child) { margin-right: 20px; margin-bottom: 1em; }
+}
+
+// Visibility (menu)
+.hide-for-mobile {
+    // hide nav bar on mobile
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    // hide menu on desktop viewport widths
+    @include breakpoint-up(large) {
+        display: none;
+    }
+}
